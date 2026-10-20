@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> **このリポジトリは `oh-my-free-models` です。OmO の非商業的な改変フォークです。**
+> 無料モデルのスキャン・割り当て・期限切れ処理を追加しています。[README.md](README.md) · [docs/free-models.md](docs/free-models.md) · [NOTICE.md](NOTICE.md)
+
 > [!NOTE]
 > **OmO ベータ: OmO ❤️ Pi**
 > `curl -fsSL https://get.omo.dev/install.sh | bash` でインストールしてください。メモリシステム、CodeMode、Anthropic サブスクリプションにすべて対応しています。

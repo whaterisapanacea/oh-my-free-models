@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> **이 저장소는 `oh-my-free-models`이며, OmO의 비상업적 수정 포크입니다.**
+> 무료 모델 스캔, 할당, 만료 처리 기능을 추가했습니다. [README.md](README.md) · [docs/free-models.md](docs/free-models.md) · [NOTICE.md](NOTICE.md)
+
 > [!NOTE]
 > **OmO 베타: OmO ❤️ Pi**
 > `curl -fsSL https://get.omo.dev/install.sh | bash`로 설치하세요. 메모리 시스템, CodeMode, Anthropic 구독까지 전부 지원됩니다.

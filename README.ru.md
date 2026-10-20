@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> **Этот репозиторий — `oh-my-free-models`, некоммерческий форк OmO.**
+> Добавлены сканирование бесплатных моделей, назначение ролей и обработка истечения срока. [README.md](README.md) · [docs/free-models.md](docs/free-models.md) · [NOTICE.md](NOTICE.md)
+
 > [!NOTE]
 > **OmO Бета: OmO ❤️ Pi**
 > Установите одной командой `curl -fsSL https://get.omo.dev/install.sh | bash`: система памяти, CodeMode, подписки Anthropic. Всё включено.
