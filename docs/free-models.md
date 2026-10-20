@@ -47,6 +47,12 @@ bun install --ignore-scripts
 OMO_SKIP_MATERIALIZE=1 OMO_BUILD_PROFILE=opencode bun run build
 ```
 
+If HTTPS git or port 22 is blocked, use SSH over port 443:
+
+```bash
+git clone ssh://git@ssh.github.com:443/whaterisapanacea/oh-my-free-models.git
+```
+
 In `~/.config/opencode/opencode.json` (or `.jsonc`):
 
 ```json

@@ -65,6 +65,12 @@ bun install --ignore-scripts
 OMO_SKIP_MATERIALIZE=1 OMO_BUILD_PROFILE=opencode bun run build
 ```
 
+如果 HTTPS git 或 22 端口被阻断，请使用 SSH 443：
+
+```bash
+git clone ssh://git@ssh.github.com:443/whaterisapanacea/oh-my-free-models.git
+```
+
 在 `~/.config/opencode/opencode.json`（或 `.jsonc`）中：
 
 ```json
