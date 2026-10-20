@@ -79,6 +79,9 @@ git clone ssh://git@ssh.github.com:443/whaterisapanacea/oh-my-free-models.git
 }
 ```
 
+> [!IMPORTANT]
+> **OpenCode 2：** `setup` 入口会加载，但 OmO 的 agents、tools、hooks 不会生效。需要完整 harness 请使用 OpenCode 1.x；如果只想使用免费模型，可按 [docs/free-models.md](docs/free-models.md#opencode-2-native-agent-overrides) 配置 V2 内置 agent。
+
 请从插件数组中移除 `oh-my-openagent` 和 `oh-my-opencode`，避免上游包与分支同时加载。重启 OpenCode 后运行：
 
 ```bash

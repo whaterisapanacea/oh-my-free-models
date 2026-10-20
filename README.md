@@ -78,6 +78,9 @@ In `~/.config/opencode/opencode.json` (or `.jsonc`):
 }
 ```
 
+> [!IMPORTANT]
+> **OpenCode 2:** the `setup` entry loads, but OmO agents, tools, and hooks are not active. Use OpenCode 1.x for the full harness, or apply the free-model choices to V2's built-in agents as shown in [docs/free-models.md](docs/free-models.md#opencode-2-native-agent-overrides).
+
 Remove `oh-my-openagent` and `oh-my-opencode` from the plugin array so the upstream package and the fork do not load at the same time. Restart OpenCode, then:
 
 ```bash

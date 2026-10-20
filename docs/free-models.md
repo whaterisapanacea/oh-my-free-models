@@ -53,7 +53,7 @@ If HTTPS git or port 22 is blocked, use SSH over port 443:
 git clone ssh://git@ssh.github.com:443/whaterisapanacea/oh-my-free-models.git
 ```
 
-In `~/.config/opencode/opencode.json` (or `.jsonc`):
+In `~/.config/opencode/opencode.jsonc`:
 
 ```json
 {
@@ -70,6 +70,42 @@ mode without a build is also supported:
   "plugin": ["file:///absolute/path/to/oh-my-free-models/packages/omo-opencode/src/index.ts"]
 }
 ```
+
+OpenCode 1.x uses `"plugin"`. OpenCode 2.x uses `"plugins"`, but the fork's V2
+entry currently loads as a notice-only stub: its OmO agents, tools, and hooks are
+not active. The free-model CLI still works on V2. For the full 19-role harness,
+use OpenCode 1.x or OmO Native instead.
+
+### OpenCode 2: native agent overrides
+
+OpenCode 2 has four built-in agents (`build`, `plan`, `general`, `explore`); it
+does not have OmO's agents or categories. You can still apply the free-model
+choices directly:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/deepseek-v4.1-flash-free",
+  "agents": {
+    "build": { "model": "opencode/minimax-m3.1-flash-free" },
+    "plan": { "model": "opencode/nemotron-3.5-super-vl-free" },
+    "general": { "model": "opencode/deepseek-v4.1-flash-free" },
+    "explore": { "model": "opencode/nemotron-3.5-lightning-free" }
+  }
+}
+```
+
+V2 has no fallback chain, so use one model per agent. Verify the resolved models
+with `opencode debug agents` and reload with `opencode reload`.
+
+### Check what your OpenCode account actually serves
+
+The models.dev catalog can list free models that your OpenCode account does not
+serve. Check `opencode models` before applying. A catalog entry may be free but
+still fail with `provider.no-route` when it is not available on your account.
+The local cache can be restricted to the served models before `free apply`; run
+`free apply --offline` afterwards so the scan does not reintroduce unavailable
+models.
 
 Restart OpenCode after changing the plugin entry. The CLI can then be run with
 `bun bin/oh-my-free-models.js free ...` from the checkout (or
@@ -128,9 +164,9 @@ omfm free apply --yes --refresh        # force a live catalog scan first
         "fallback_models": ["opencode/..."],
         "models": ["opencode/...", "opencode/..."]
       }
-    }
-  },
-  "runtime_fallback": true
+    },
+    "runtime_fallback": true
+  }
 }
 ```
 
